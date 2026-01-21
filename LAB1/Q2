@@ -1,12 +1,10 @@
 #include <stdio.h>
 
 int main() {
-    int n, rev = 0, temp, rem;
+    int n, rev = 0, rem;
 
     printf("Enter a number: ");
     scanf("%d", &n);
-
-    temp = n;   // store original number
 
     while(n > 0) {
         rem = n % 10;
@@ -14,10 +12,7 @@ int main() {
         n = n / 10;
     }
 
-    if(temp == rev)
-        printf("Palindrome Number");
-    else
-        printf("Not a Palindrome Number");
+    printf("Reversed number = %d", rev);
 
     return 0;
 }
